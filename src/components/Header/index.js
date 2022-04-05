@@ -1,8 +1,19 @@
+import { useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/styles';
 import React from 'react'
+import Navbar from '../Navbar'
+import NavbarMobile from '../NavbarMobile';
 
 const Header = () => {
+  const theme = useTheme();
+    const mobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <div>Header</div>
+    <>
+    {mobile?
+      <NavbarMobile/>:
+      <Navbar/>
+    }
+    </>
   )
 }
 

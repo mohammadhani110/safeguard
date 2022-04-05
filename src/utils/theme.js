@@ -40,10 +40,14 @@ export const theme = createTheme({
       },
       text:{
         primary:"#086BA3",
-        para:"#464B5E"
+        para:"#464B5E",
+        placeholder:"#8A8D95",
+        sitemap:"#222531",
       },
       background:{
-        default:"#F3FBFF",       
+        default:"#F3FBFF", 
+        primary:"#086BA3",
+
       },           
     },
     overrides: {

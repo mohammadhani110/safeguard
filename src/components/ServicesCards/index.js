@@ -205,7 +205,7 @@ const ServicesCard = () => {
 
             <Button className={classes.ctaSecondary}>
                 {/* <Link >Get started</Link> */}
-                <>Get started</>
+                <>View More Services</>
             </Button>
         </div>
     )

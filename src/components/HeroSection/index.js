@@ -3,6 +3,25 @@ import React from 'react'
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
+    heroSection:{
+        background: "#F3FBFF",
+        padding:"7rem 0",
+        "& .mainHeading":{
+            marginBottom:".5rem",
+            marginTop:"2rem"
+        },
+        "& .subHeading":{
+            marginBottom:"1rem",
+            textTransform:"uppercase",
+        },
+        "& .paragraph":{
+            marginBottom:"1.5rem",
+        },
+        "& .heroImgBox":{
+            display:"flex",
+            justifyContent:"flex-end"
+        },
+    },
     cta: {
         background: theme.palette.text.primary,
         textTransform: "none",
@@ -28,17 +47,16 @@ const useStyles = makeStyles((theme) => ({
 const HeroSection = ({ imgDirection, img }) => {
     const classes = useStyles()
     return (
-        <section style={{ background: "#F3FBFF" }}>
+        <section className={classes.heroSection}>
             <Container>
-                <Grid container columnSpacing={5} flexDirection={imgDirection == "left" ? "row" : "row-reverse"}>
-                    <Grid item xs={12} md={6}>
-                        <img src={img} />
-
+                <Grid container columnSpacing={10} flexDirection={imgDirection == "left" ? "row" : "row-reverse"}>
+                    <Grid item xs={12} md={6} className="heroImgBox">
+                        <img src={img} alt="heroImg"/>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Typography variant='h1' component="h1" color={"primary"}>We Are SaveGuard Insurance Agency</Typography>
-                        <Typography variant='h6' component="h6" >Earning Your Trust! Protecting Your Future.</Typography>
-                        <Typography variant='body1' component="p" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit pulvinar quam nisi sem at condimentum. Sollicitudin sed magna sociis arcu diam, lectus. Enim adipiscing cursus   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit pulvinar quam nisi sem at condimentum. Sollicitudin sed magna sociis arcu diam, lectus. Enim adipiscing cursus.</Typography>
+                        <Typography variant='h1' component="h1" color={"primary"} className="mainHeading">We Are SaveGuard Insurance Agency</Typography>
+                        <Typography variant='h6' component="h6" className="subHeading">Earning Your Trust! Protecting Your Future.</Typography>
+                        <Typography variant='body1' component="p" className="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit pulvinar quam nisi sem at condimentum. Sollicitudin sed magna sociis arcu diam, lectus. Enim adipiscing cursus   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit pulvinar quam nisi sem at condimentum. Sollicitudin sed magna sociis arcu diam, lectus. Enim adipiscing cursus.</Typography>
                         <Button variant="contained" className={classes.cta}>Contact Us</Button>
                     </Grid>
                 </Grid>
