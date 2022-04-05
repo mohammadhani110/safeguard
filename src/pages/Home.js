@@ -11,11 +11,23 @@ import ContactSection from '../components/ContactSection'
 
 
 // }))
+const data = {
+  image: about,
+  title: "Why Choose SaveGuard?",
+  subTitle: "About Us",
+  para: `When you decide it is time to buy your insurance, you think of two things only. is my property, my family and my self GUARDED from Risks. the second thing  is how can I SAVE money.
+  At SaveGuard insurance agency, our primary goal is to provide you with the best insurance from the company which perfectly suits you and can truly satisfies your need while save you as much as you want.
+  our Job at SaveGuard is to find a way to Save Your Money And Guard Your Car, Home and Business.
+  thus its our Job to find best company for you.
+  at SaveGuard we want to prove that Good Coverage Doesn't Need to Be expensive.`,
+  imgDirection: "left",
+  background: false,
+}
 const Home = () => {
   return (
     <>
       <HeroSection imgDirection={"right"} img={hero} />
-      <ImgContentLayout imgDirection={"left"} img={about} />
+      <ImgContentLayout data={data} />    
       <ServicesSection />
       <ContactSection />
     </>

@@ -3,17 +3,24 @@ import { Grid, Typography, Container, Button } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
-    wrapper:{
-        padding:"7rem 0",
+    wrapper: {
+        padding: "7rem 0",
         "& .title": {
-            marginBottom:"1.2rem"
+            marginBottom: "1.2rem"
         },
         "& .subTitle": {
-            marginBottom:".75rem",
-            textTransform:"uppercase"
+            marginBottom: ".75rem",
+            textTransform: "uppercase"
         },
         "& .para": {
-            marginBottom:"1.5rem"
+            marginBottom: "1.5rem"
+        },
+        "&.bg": {
+            background: "#F3FBFF !important",
+        },
+        "& .flexRight": {
+            display: "flex",
+            justifyContent: "flex-end",
         },
     },
     cta: {
@@ -38,25 +45,22 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const ImgContentLayout = ({ imgDirection, img }) => {
+const ImgContentLayout = ({ data }) => {
+    const { imgDirection, image, title, subTitle, background, para } = data
     const classes = useStyles()
 
     return (
-        <section className={classes.wrapper}>
+        <section className={`${classes.wrapper} ${background ? "bg" : ""}`}>
             <Container>
                 <Grid container flexDirection={imgDirection == "left" ? "row" : "row-reverse"}>
-                    <Grid item xs={12} md={6}>
-                        <img src={img} />
+                    <Grid item xs={12} md={6} className={imgDirection == "right" ? "flexRight" : ""}>
+                        <img src={image} alt="section img" height={"100%"} width="auto" />
 
                     </Grid>
-                    <Grid item xs={12} md={6}>
-                        <Typography variant='h3' component="h3" color="primary" className="subTitle">About Us</Typography>
-                        <Typography variant='h2' component="h2" className="title">Why Choose SaveGuard?</Typography>
-                        <Typography variant='body1' component="p" className="para">When you decide it is time to buy your insurance, you think of two things only. is my property, my family and my self GUARDED from Risks. the second thing  is how can I SAVE money.
-                            At SaveGuard insurance agency, our primary goal is to provide you with the best insurance from the company which perfectly suits you and can truly satisfies your need while save you as much as you want.
-                            our Job at SaveGuard is to find a way to Save Your Money And Guard Your Car, Home and Business.
-                            thus its our Job to find best company for you.
-                            at SaveGuard we want to prove that Good Coverage Doesn't Need to Be expensive.</Typography>
+                    <Grid item xs={12} md={6} >
+                        <Typography variant='h3' component="h3" color="primary" className="subTitle">{subTitle}</Typography>
+                        <Typography variant='h2' component="h2" className="title">{title}</Typography>
+                        <Typography variant='body1' component="p" className="para">{para}</Typography>
                         <Button variant='contained' className={classes.cta}>View more</Button>
                     </Grid>
                 </Grid>
