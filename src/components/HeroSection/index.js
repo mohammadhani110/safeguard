@@ -1,6 +1,7 @@
 import { Button, Grid, Typography, Container } from '@mui/material'
 import React from 'react'
 import { makeStyles } from '@mui/styles'
+import { useNavigate } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     heroSection: {
@@ -94,6 +95,7 @@ const useStyles = makeStyles((theme) => ({
 
 const HeroSection = ({ imgDirection, img }) => {
     const classes = useStyles()
+    const navigate = useNavigate()
     return (
         <section className={classes.heroSection}>
             <Container>
@@ -104,8 +106,8 @@ const HeroSection = ({ imgDirection, img }) => {
                     <Grid item xs={12} md={6}>
                         <Typography variant='h1' component="h1" color={"primary"} className="mainHeading">We Are SaveGuard Insurance Agency</Typography>
                         <Typography variant='h6' component="h6" className="subHeading">Earning Your Trust! Protecting Your Future.</Typography>
-                        <Typography variant='body1' component="p" className="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit pulvinar quam nisi sem at condimentum. Sollicitudin sed magna sociis arcu diam, lectus. Enim adipiscing cursus   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit pulvinar quam nisi sem at condimentum. Sollicitudin sed magna sociis arcu diam, lectus. Enim adipiscing cursus.</Typography>
-                        <Button variant="contained" className={classes.cta}>Contact Us</Button>
+                        <Typography variant='body1' component="p" className="paragraph">At SaveGuard insurance agency, our primary goal is to provide you with the best insurance from the company which perfectly suits you and can truly satisfies your need while save you as much as you want.</Typography>
+                        <Button variant="contained" className={classes.cta} onClick={()=>{navigate("/contact")}}>Get Started</Button>
                     </Grid>
                 </Grid>
             </Container>

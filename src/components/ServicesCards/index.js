@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import serviceIcon1 from "../../assets/home/serviceIcon1.png"
 import serviceIcon2 from "../../assets/home/serviceIcon2.png"
 import serviceIcon3 from "../../assets/home/serviceIcon3.png"
@@ -194,6 +194,7 @@ const services=[
 ]
 const ServicesCard = () => {
     const classes = useStyles()
+    const navigate = useNavigate()
     return (
         <div className={classes.testimonialsContainer}>
 
@@ -204,9 +205,8 @@ const ServicesCard = () => {
                 })}
             </div>
 
-            <Button className={classes.ctaSecondary}>
-                {/* <Link >Get started</Link> */}
-                <>View More Services</>
+            <Button className={classes.ctaSecondary}  onClick={() => { navigate("/personal-insurance") }}>                
+                View More Services
             </Button>
         </div>
     )

@@ -51,6 +51,9 @@ const data = {
   at SaveGuard we want to prove that Good Coverage Doesn't Need to Be expensive.`,
   imgDirection: "right",
   background: true,
+  cta:"Get a Quote",
+  link:"/contact",
+
 }
 const About = () => {
   const classes = useStyles();

@@ -23,6 +23,8 @@ const data = {
   at SaveGuard we want to prove that Good Coverage Doesn't Need to Be expensive.`,
   imgDirection: "left",
   background: false,
+  cta:"View More",
+  link:"/about",
 }
 const Home = () => {
   return (

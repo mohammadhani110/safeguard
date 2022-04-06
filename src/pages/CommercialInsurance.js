@@ -27,7 +27,8 @@ const data = {
   and many others`, 
   imgDirection: "right",
   background: true,
-  cta:"Get Auto Quote",
+  link:"/contact",
+  cta:"Get a Quote"
 }
 const data4 = {
   image: about,
@@ -37,7 +38,8 @@ const data4 = {
   thus for your business sake, call us at 510-538-7233`, 
   imgDirection: "left",
   background: false,
-  cta:"Get Auto Quote",
+  cta:"Get a Quote",
+  link:"/contact",
 }
 const data5 = {
   image: about,
@@ -53,7 +55,8 @@ const data5 = {
   if its a fleet of more than 4 Trucks, you can call us at 510-538-7233 to scheduled an appointment with our agent, or have him meet you at the location of your business.`, 
   imgDirection: "right",
   background: true,
-  cta:"Get Auto Quote",
+  cta:"Get a Quote",
+  link:"/contact",
 }
 const data6 = {
   image: about,
@@ -64,7 +67,8 @@ const data6 = {
 
   imgDirection: "right",
   background: true,
-  cta:"Get Quote",
+  link:"/contact",
+  cta:"Get a Quote",
 }
 const data7 = {
   image: about,
@@ -74,10 +78,10 @@ const data7 = {
   para2: `stop by our Office at 22576 Mission blvd, Hayward, CA, 94541
         having an experience in this business can save you a lot of money on Insurance, but if your just starting your business, we can definitely beat any other prices in the market.`, 
   para3: `Call us Now at 510-538-7233 and we will help you with city filing and Insurance.`, 
-
+  link:"/contact",
   imgDirection: "left",
   background: false,
-  cta:"Get Quote",
+  cta:"Get a Quote",
 }
 const data2 = {
   image: about,
@@ -88,6 +92,7 @@ const data2 = {
   imgDirection: "left",
   background: false,
   cta:"Get a Quote",
+  link:"/contact",
   lists: [  
     { heading: ``, para: `3) Our Registration service will be at your disposal, we will guide you and check your DMV papers For FREE!, if you want us to do the DMV work For YOU, Its $20/CAR. and will VIN verify your cars for as low as $30/ car at your dealership.` },
     { heading: ``, para: `4)  DMV print out for your cars for FREE, limit two cars per month. sometimes you get a letter from the fast track or a ticket, the DMV prevents you from printing the records of the car if you don't have the VIN number. well we will tell you the owner chain of the vehicle and the DMV record by only providing us with the license plates.` },

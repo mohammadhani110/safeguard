@@ -27,6 +27,7 @@ const data = {
   imgDirection: "right",
   background: true,
   cta:"Get Auto Quote",
+  link:"/contact"
 }
 const data2 = {
   image: about,
@@ -36,6 +37,7 @@ const data2 = {
   imgDirection: "left",
   background: false,
   cta:"Get a Home Quote",
+  link:"/contact",
   lists: [
     { heading: `HO2 – Broad Form Homeowner Policy`, para: `A more advanced form that provides coverage on a home against 17 listed perils (including all 11 on the HO1). The coverage is usually a "named perils" policy, which lists the events that would be covered.` },
     { heading: `HO3 – Special Form Homeowner Policy`, para: `The typical, most comprehensive form used for single-family homes. The policy provides "all risk" coverage on the home with some perils excluded, such as earthquake and flood. Contents are covered on a named peril basis. (Note: "All Risk" is poorly termed as it is essentially named exclusions (ie, if it is not specifically excluded, it is covered))` },
@@ -55,6 +57,7 @@ const data3 = {
   imgDirection: "right",
   background: true,
   cta:"Get Personal Umbrella Quote",
+  link:"/contact",
   lists: [
     { heading: `HO2 – Broad Form Homeowner Policy`, para: `A more advanced form that provides coverage on a home against 17 listed perils (including all 11 on the HO1). The coverage is usually a "named perils" policy, which lists the events that would be covered.` },
     { heading: `HO3 – Special Form Homeowner Policy`, para: `The typical, most comprehensive form used for single-family homes. The policy provides "all risk" coverage on the home with some perils excluded, such as earthquake and flood. Contents are covered on a named peril basis. (Note: "All Risk" is poorly termed as it is essentially named exclusions (ie, if it is not specifically excluded, it is covered))` },

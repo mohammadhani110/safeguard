@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Typography, Container, Button } from '@mui/material'
 import { makeStyles } from '@mui/styles'
+import { useNavigate } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
@@ -131,8 +132,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ServiceImgContentList = ({ data }) => {
-    const { imgDirection, image, title, heading, para, heading2, para2, lists, background, cta } = data
+    const { imgDirection, image, title, heading, para, heading2, para2, lists, background, cta, link } = data
     const classes = useStyles()
+    const navigate = useNavigate()
 
     return (
         <section className={`${classes.wrapper} ${background ? "bg" : ""}`}>
@@ -159,7 +161,7 @@ const ServiceImgContentList = ({ data }) => {
                                     <Typography variant='body1' component="p" className="para">{para}</Typography>
                                 </>)
                         })}
-                        <Button variant='contained' className={classes.cta}>{cta}</Button>
+                        <Button variant='contained' className={classes.cta}  onClick={() => { navigate(link) }}>{cta}</Button>
                     </Grid>
                 </Grid>
             </Container>
