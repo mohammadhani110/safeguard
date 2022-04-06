@@ -9,7 +9,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import { Link } from 'react-router-dom';
 
-const navigation = [{ name: "Home", path: "/" }, { name: "About us", path: "/about" }, { name: "Gallery", path: "/gallery" }, { name: "US location", path: "/location" }, { name: "Blog", path: "/blog" }]
+const navigation = [{ name: "Home", path: "/" }, { name: "About us", path: "/about" }, { name: "Personal Insurance", path: "/personal-insurance" }, { name: "Commercial Insurance", path: "/commercial-insurance" }, { name: "Bonds", path: "/bonds" }]
 
 export default function DrawerNav({ open, setOpen }) {
     // const [open, setOpen] = React.useState(false);
