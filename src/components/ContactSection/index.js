@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Button, Container, TextField, Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
+import { lineHeight } from '@mui/system';
 const useStyles = makeStyles((theme) => ({
     cta: {
         background: theme.palette.text.primary,
@@ -25,7 +26,24 @@ const useStyles = makeStyles((theme) => ({
     contactSection: {
         marginBottom: "4rem",
 
-        "&.mt": { marginTop: "-15rem", },
+        "&.mt": {
+            marginTop: "-15rem",
+            [theme.breakpoints.down(1200)]: {
+                margin: "0",
+            },
+            [theme.breakpoints.down("md")]: {
+                marginBottom:"5rem"
+            }
+
+        },
+        "& .container": {
+            [theme.breakpoints.down(1200)]: {
+              display:"flex",
+              alignItems:"center",
+              justifyContent:"center"
+            },
+            
+        },
         "& .contactBox": {
             maxWidth: 970,
             height: 380,
@@ -39,10 +57,46 @@ const useStyles = makeStyles((theme) => ({
             "padding": "4rem 3rem",
             "margin": "0 auto",
             "borderRadius": "30px",
+            [theme.breakpoints.down(1200)]: {
+                "padding": "2rem 1rem",
+                maxWidth:800,
+                margin:"0",
+                marginTop:"1rem",
+                height:"100%"
+            },
+            [theme.breakpoints.down("sm")]: {
+            },
             "& .MuiTypography-root": {
                 color: "#fff",
                 "width": "80%",
                 "lineHeight": "3rem",
+               
+            },
+            "& .title": {
+                fontWeight:"bold",
+                [theme.breakpoints.down(1200)]: {
+                  fontSize:"2rem"                
+                },
+                [theme.breakpoints.down("sm")]:{
+                    fontSize:"1.5rem",
+                    width:"100%"
+                },
+            },
+            "& .heading": {
+                [theme.breakpoints.down(1200)]: {
+                    lineHeight:"2.5rem",
+                    fontSize:"1.75rem"                
+                  },
+                [theme.breakpoints.down("sm")]:{
+                    fontSize:"1.25rem",
+                    width:"100%",
+                },
+            },
+            "& .para": {
+                fontSize:'1rem',
+                [theme.breakpoints.down(1200)]: {
+                    lineHeight:"2rem",
+                  },
             },
 
         },
@@ -87,11 +141,11 @@ const ContactSection = ({ isHome }) => {
     const classes = useStyles()
     return (
         <section className={`${classes.contactSection} ${isHome ? "mt" : ""}`}>
-            <Container>
+            <Container className="container">
                 <Box component="div" className="contactBox">
-                    <Typography component="h2" variant="h2" sx={{ fontWeight: "bold" }}>Contact Us</Typography>
-                    <Typography component="h3" variant="h3">Subscribe below for interesting info</Typography>
-                    <Typography component="p" variant="body1" sx={{ fontWeight: "400", fontSize: "1.1rem", marginBottom: "1rem" }}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Let Them Know Why You’re the Best</Typography>
+                    <Typography component="h2" variant="h2" className='title'>Contact Us</Typography>
+                    <Typography component="h3" variant="h3" className="heading">Subscribe below for interesting info</Typography>
+                    <Typography component="p" variant="body1" className='para'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Let Them Know Why You’re the Best</Typography>
                     <Box
                         component="form"
                         noValidate

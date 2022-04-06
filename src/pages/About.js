@@ -18,6 +18,12 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
       maxWidth: "60%",
       margin: "4rem auto 3rem",
+      [theme.breakpoints.down("md")]: {
+        padding:"1rem",
+        margin:"4rem 0",
+        maxWidth:"100%",
+      },
+
     },
     "& .countryBox": {
       "& li": {

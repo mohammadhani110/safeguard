@@ -4,7 +4,9 @@ import { Container } from '@mui/material';
 
 const useStyles = makeStyles((theme) => ({
     countryBox: {
-
+        [theme.breakpoints.down("md")]: {
+            padding: "0 1rem",
+        },
         "& .list": {
             listStyle: "none",
             lineHeight: "1.75rem",

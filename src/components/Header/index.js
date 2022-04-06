@@ -6,7 +6,7 @@ import NavbarMobile from '../NavbarMobile';
 
 const Header = () => {
   const theme = useTheme();
-    const mobile = useMediaQuery(theme.breakpoints.down("md"));
+    const mobile = useMediaQuery(theme.breakpoints.down("1015"));
   return (
     <>
     {mobile?

@@ -7,7 +7,9 @@ const useStyles = makeStyles((theme) => ({
         background:theme.palette.background.default,
         padding:"7rem 0",
         height: "500px",        
-
+        [theme.breakpoints.down("md")]: {
+            height:"100%"
+        }
     },
 }))
 const NewsLetter = () => {

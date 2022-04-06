@@ -3,23 +3,65 @@ import React from 'react'
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
-    heroSection:{
+    heroSection: {
         background: "#F3FBFF",
-        padding:"7rem 0",
-        "& .mainHeading":{
-            marginBottom:".5rem",
-            marginTop:"2rem"
+        padding: "7rem 0",
+        "& .mainHeading": {
+            marginBottom: ".5rem",
+            marginTop: "2rem",
+            [theme.breakpoints.down(1100)]: {
+                fontSize: "2rem",
+                lineHeight: "2.375rem",
+            },
+            [theme.breakpoints.down("md")]: {
+                marginLeft: "2rem",
+                marginRight: "2rem"
+            },
+            [theme.breakpoints.down("sm")]: {
+                fontSize: "1.5rem",
+                lineHeight: "2rem",
+                margin: "1rem",
+            }
         },
-        "& .subHeading":{
-            marginBottom:"1rem",
-            textTransform:"uppercase",
+        "& .subHeading": {
+            marginBottom: "1rem",
+            textTransform: "uppercase",
+            [theme.breakpoints.down(1100)]: {
+                fontSize: "1.2rem",
+                lineHeight: "1.75rem",
+            },
+            [theme.breakpoints.down("md")]: {
+                marginLeft: "2rem",
+                marginRight: "2rem"
+            },
+            [theme.breakpoints.down("sm")]: {
+                fontSize: "1rem",
+                lineHeight: "1.375rem",
+                margin: "1rem"
+            }
         },
-        "& .paragraph":{
-            marginBottom:"1.5rem",
+        "& .paragraph": {
+            marginBottom: "1.5rem",
+            [theme.breakpoints.down("md")]: {
+                marginLeft: "2rem",
+                marginRight: "2rem"
+            },
+            [theme.breakpoints.down("sm")]: {
+                margin: "1rem"
+            }
         },
-        "& .heroImgBox":{
-            display:"flex",
-            justifyContent:"flex-end"
+        "& .heroImgBox": {
+            display: "flex",
+            justifyContent: "flex-end",
+            [theme.breakpoints.down("md")]: {
+                justifyContent: "center"
+            },
+            "& .heroImg": {
+                [theme.breakpoints.down(1100)]: {
+                    maxWidth: "90%"
+                },
+
+            }
         },
     },
     cta: {
@@ -29,7 +71,13 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "100px",
         color: "#fff",
         fontWeight: "600",
-
+        [theme.breakpoints.down("md")]: {
+            marginLeft: "2rem",
+            marginRight: "2rem"
+        },
+        [theme.breakpoints.down("sm")]: {
+            margin: "1rem"
+        },
         boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.12)",
         "&:hover": {
             boxShadow: "none",
@@ -51,7 +99,7 @@ const HeroSection = ({ imgDirection, img }) => {
             <Container>
                 <Grid container columnSpacing={10} flexDirection={imgDirection == "left" ? "row" : "row-reverse"}>
                     <Grid item xs={12} md={6} className="heroImgBox">
-                        <img src={img} alt="heroImg"/>
+                        <img src={img} alt="heroImg" className='heroImg' />
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Typography variant='h1' component="h1" color={"primary"} className="mainHeading">We Are SaveGuard Insurance Agency</Typography>

@@ -13,8 +13,16 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "space-between",
       gap: "1rem",
       paddingBottom:"1rem",
+      [theme.breakpoints.down("md")]: {
+        flexDirection:"column",
+        alignItems:"center"
+      },
       "& .MuiTypography-root": {
         color: theme.palette.text.sitemap,
+        [theme.breakpoints.down("md")]: {
+          lineHeight:'2rem',
+          fontSize:"1rem"
+        },
       },
     },
     "& .socialBox": {

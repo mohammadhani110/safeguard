@@ -56,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        
 
 
         "& .highlight-bar": {
@@ -90,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
             alignItems: "center",
             gap: "2rem",
             marginBottom: "76px",
-            [theme.breakpoints.down("1100")]: {
+            [theme.breakpoints.down("1200")]: {
                 flexWrap: "wrap",
                 gap: "2rem",
                 justifyContent: "space-around",
