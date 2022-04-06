@@ -14,21 +14,23 @@ const useStyles = makeStyles((theme) => ({
             padding:0,
             margin:0,            
             height: "600px",
+            borderRadius:"20px",
         },
         "& .gridImg":{
-         
+            [theme.breakpoints.down("md")]:{
+                display:"none"
+            },
             "& .imgBox":{
-
+                borderTopLeftRadius: "20px",
+                borderBottomLeftRadius: "20px",
+                
                 width:"100%",
                 maxHeight:"600px",
                 background:`url(${img}) no-repeat center center`,
                 backgroundSize:"40rem",
                 height:"100%"
-                // "& .img":{
-                //     maxWidth:"100%",
-                //     width:"100%",
-                //     height:"auto"
-                // }
+            
+            
 
             },
         },
@@ -38,11 +40,29 @@ const useStyles = makeStyles((theme) => ({
             flexDirection:"column",
             justifyContent:"center",
             padding:"2rem 2rem",
+            borderTopRightRadius:"20px",
+            borderBottomRightRadius: "20px",
+            borderRadius:"20px",
+            "& .heading":{
+                marginBottom:"1rem"
+            },
             "& .phoneBox":{
                 display:"flex",
                 alignItems:"center",
                 gap:"1rem",
                 marginBottom:"2rem",
+                flexWrap:"wrap",
+                
+                "& .phone":{
+                    [theme.breakpoints.down(1110)]:{
+                        fontSize:"1rem",
+                        lineHeight:"1.5rem"
+                    },
+                    [theme.breakpoints.down("sm")]:{
+                        fontSize:".9rem",
+                        lineHeight:"1.5rem"
+                    },
+                },
             },
             "& .form":{
                 // margin:"1rem .5rem"
@@ -66,17 +86,17 @@ const ContactUsSection = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6} className='gridForm'>
-                        <Typography variant="h2" component={"h2"} color="primary">Contact Us</Typography>
+                        <Typography variant="h2" component={"h2"} color="primary" className='heading'>Contact Us</Typography>
                         <Box className="phoneBox">
                             <img src={contact} alt="contact" height={"auto"}/>
-                            <Typography variant="h6" component={"h6"} >510-538-7233</Typography>
-                            <Typography variant="h6" component={"h6"} >805-294-2092</Typography>
-                            <Typography variant="h6" component={"h6"} >510-537-8401</Typography>
+                            <Typography variant="h6" component={"h6"} className="phone">510-538-7233</Typography>
+                            <Typography variant="h6" component={"h6"} className="phone">805-294-2092</Typography>
+                            <Typography variant="h6" component={"h6"} className="phone">510-537-8401</Typography>
                         </Box>
                         <Box
                             component="form"
                             sx={{
-                                '& > :not(style)': { m: 1, width: '90%' },
+                                '& > :not(style)': { m: 1, width: '90%', },
                                
                             }}
                             noValidate
