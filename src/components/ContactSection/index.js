@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, Button, Container, TextField, Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
-import { fontWeight } from '@mui/system';
 const useStyles = makeStyles((theme) => ({
     cta: {
         background: theme.palette.text.primary,
@@ -24,8 +23,9 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     contactSection: {
-        marginBottom:"4rem",
-        marginTop:"-15rem",
+        marginBottom: "4rem",
+
+        "&.mt": { marginTop: "-15rem", },
         "& .contactBox": {
             maxWidth: 970,
             height: 380,
@@ -83,10 +83,10 @@ const useStyles = makeStyles((theme) => ({
         },
     }
 }));
-const ContactSection = () => {
+const ContactSection = ({ isHome }) => {
     const classes = useStyles()
     return (
-        <section className={classes.contactSection}>
+        <section className={`${classes.contactSection} ${isHome ? "mt" : ""}`}>
             <Container>
                 <Box component="div" className="contactBox">
                     <Typography component="h2" variant="h2" sx={{ fontWeight: "bold" }}>Contact Us</Typography>

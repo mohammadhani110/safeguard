@@ -9,8 +9,8 @@ const Header = React.lazy(() => import('./components/Header'));
 const Footer = React.lazy(() => import('./components/Footer'));
 
 const Home = React.lazy(() => import('./pages/Home'));
-// const Gallery = React.lazy(() => import('../Pages/Gallery'));
-// const Login = React.lazy(() => import('../Pages/Login'));
+const About = React.lazy(() => import('./pages/About'));
+const Services = React.lazy(() => import('./pages/Services'));
 // const SignUp = React.lazy(() => import('../Pages/SignUp'));
 
 
@@ -79,6 +79,8 @@ function RouterIndex() {
             <BrowserRouter>
                 <Routes>
                 <Route exact path='/' element={<NormalRoute component={Home}/>}/>
+                <Route exact path='/about' element={<NormalRoute component={About}/>}/>
+                <Route exact path='/services' element={<NormalRoute component={Services}/>}/>
 
 
                 {/* <Route path='*' element={<Error404 />} /> */}

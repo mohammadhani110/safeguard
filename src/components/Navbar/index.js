@@ -103,7 +103,7 @@ const Navbar = () => {
                             About
                         </NavLink>
                         <NavLink
-                            to="/gallery"
+                            to="/personal-insurance"
                             className={location?.pathname === "/gallery" ? "active" : ""}
 
                         >
@@ -112,25 +112,25 @@ const Navbar = () => {
 
 
                         <NavLink
-                            to="/blog"
+                            to="/commercial-insurance"
                             className={location?.pathname === "/blog" ? "active" : ""}
                         >
                             Commercial Insurance
                         </NavLink>
                         <NavLink
-                            to="/blog"
+                            to="/bonds"
                             className={location?.pathname === "/blog" ? "active" : ""}
                         >
                             Bonds
                         </NavLink>
                         <NavLink
-                            to="/blog"
+                            to="/dmv-services"
                             className={location?.pathname === "/blog" ? "active" : ""}
                         >
                             DMV Services
                         </NavLink>
                         <NavLink
-                            to="/blog"
+                            to="/contact"
                             className={classes.cta}
                         >
                             Contact Us

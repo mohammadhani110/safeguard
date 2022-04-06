@@ -2,10 +2,11 @@
 import React from 'react'
 import HeroSection from '../components/HeroSection'
 import ImgContentLayout from '../components/ImgContentLayout'
-import hero from "../assets/home/heroSection.png"
-import about from "../assets/home/aboutSection.png"
 import ServicesSection from '../components/ServicesSection'
 import ContactSection from '../components/ContactSection'
+
+import hero from "../assets/home/heroSection.png"
+import about from "../assets/home/aboutSection.png"
 
 // const useStyles = makeStyles((theme) => ({
 
@@ -29,7 +30,7 @@ const Home = () => {
       <HeroSection imgDirection={"right"} img={hero} />
       <ImgContentLayout data={data} />    
       <ServicesSection />
-      <ContactSection />
+      <ContactSection isHome={true}/>
     </>
   )
 }
