@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Container, AppBar, Toolbar, IconButton, useMediaQuery, Button } from '@mui/material';
 import { makeStyles, useTheme } from '@mui/styles';
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import logo from "../../assets/home/logo.png";
 
@@ -68,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
 const Navbar = () => {
     const classes = useStyles()
     const location = useLocation();
+  
     const theme = useTheme();
     const mobile = useMediaQuery(theme.breakpoints.down("1012"));
 
@@ -104,7 +105,7 @@ const Navbar = () => {
                         </NavLink>
                         <NavLink
                             to="/personal-insurance"
-                            className={location?.pathname === "/gallery" ? "active" : ""}
+                            className={location?.pathname === "/personal-insurance" ? "active" : ""}
 
                         >
                             Personal Insurance
@@ -113,19 +114,24 @@ const Navbar = () => {
 
                         <NavLink
                             to="/commercial-insurance"
-                            className={location?.pathname === "/blog" ? "active" : ""}
+                            className={location?.pathname === "/commercial-insurance" ? "active" : ""}
                         >
                             Commercial Insurance
                         </NavLink>
                         <NavLink
                             to="/bonds"
-                            className={location?.pathname === "/blog" ? "active" : ""}
+                            className={location?.pathname === "/bonds" ? "active" : ""}
                         >
                             Bonds
                         </NavLink>
                         <NavLink
-                            to="/dmv-services"
-                            className={location?.pathname === "/blog" ? "active" : ""}
+                            className={location?.pathname === "/dmv-services" ? "active" : ""}
+                            to={{ pathname: "https://www.1stopautoreg.com/" }}
+                            target="_blank"
+                            onClick={()=>{
+                                const win=window.open("https://www.1stopautoreg.com/","_blank")   
+                                win.focus();
+                            }}
                         >
                             DMV Services
                         </NavLink>

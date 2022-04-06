@@ -64,7 +64,7 @@ const data3 = {
     { heading: `HO8 – Older Houses`, para: `The "Modified Coverage" form is for the owner-occupied older home whose replacement cost far exceeds the property's market value.` },
   ]
 }
-const Services = () => {
+const PersonalInsurance = () => {
   const classes = useStyles()
   return (
     <section>
@@ -75,4 +75,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default PersonalInsurance

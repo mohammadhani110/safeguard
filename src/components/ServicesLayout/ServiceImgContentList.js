@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ServiceImgContentList = ({ data }) => {
-    const { imgDirection, image, title, para, heading, lists, background,cta } = data
+    const { imgDirection, image, title, heading, para, heading2, para2, lists, background, cta } = data
     const classes = useStyles()
 
     return (
@@ -62,6 +62,8 @@ const ServiceImgContentList = ({ data }) => {
                         <Typography variant='h2' component="h2" className="title">{title}</Typography>
                         <Typography variant='h6' component="h6" className="heading">{heading}</Typography>
                         <Typography variant='body1' component="p" className="para">{para}</Typography>
+                        {heading2 && <Typography variant='h6' component="h6" className="heading">{heading2}</Typography>}
+                        {para2 && <Typography variant='body1' component="p" className="para">{para2}</Typography>}
                     </Grid>
                 </Grid>
                 <Grid container>

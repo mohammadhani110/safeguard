@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ImgContentLayout = ({ data }) => {
-    const { imgDirection, image, title, subTitle, background, para } = data
+    const { imgDirection, image, title, subTitle, background, para, para2, para3 } = data
     const classes = useStyles()
 
     return (
@@ -61,6 +61,8 @@ const ImgContentLayout = ({ data }) => {
                         <Typography variant='h3' component="h3" color="primary" className="subTitle">{subTitle}</Typography>
                         <Typography variant='h2' component="h2" className="title">{title}</Typography>
                         <Typography variant='body1' component="p" className="para">{para}</Typography>
+                        {para2 && <Typography variant='body1' component="p" className="para">{para2}</Typography>}
+                        {para3 && <Typography variant='body1' component="p" className="para">{para3}</Typography>}
                         <Button variant='contained' className={classes.cta}>View more</Button>
                     </Grid>
                 </Grid>

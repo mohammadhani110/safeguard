@@ -10,8 +10,9 @@ const Footer = React.lazy(() => import('./components/Footer'));
 
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
-const Services = React.lazy(() => import('./pages/Services'));
-// const SignUp = React.lazy(() => import('../Pages/SignUp'));
+const PersonalInsurance = React.lazy(() => import('./pages/PersonalInsurance'));
+const CommercialInsurance = React.lazy(() => import('./pages/CommercialInsurance'));
+const Bonds = React.lazy(() => import('./pages/Bonds'));
 
 
 
@@ -80,7 +81,9 @@ function RouterIndex() {
                 <Routes>
                 <Route exact path='/' element={<NormalRoute component={Home}/>}/>
                 <Route exact path='/about' element={<NormalRoute component={About}/>}/>
-                <Route exact path='/personal-insurance' element={<NormalRoute component={Services}/>}/>
+                <Route exact path='/personal-insurance' element={<NormalRoute component={PersonalInsurance}/>}/>
+                <Route exact path='/commercial-insurance' element={<NormalRoute component={CommercialInsurance}/>}/>
+                <Route exact path='/bonds' element={<NormalRoute component={Bonds}/>}/>
 
 
                 {/* <Route path='*' element={<Error404 />} /> */}
