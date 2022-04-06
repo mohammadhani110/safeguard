@@ -1,17 +1,13 @@
 import React from 'react'
+import { Typography, Container } from '@mui/material'
 import { makeStyles } from '@mui/styles'
-import { Typography, Box, Container } from '@mui/material'
-import ContactSection from '../ContactSection'
 
 const useStyles = makeStyles((theme) => ({
     newsLetter: {
         background:theme.palette.background.default,
         padding:"7rem 0",
-        height: "500px",
-        "& .container": {
-        //    marginBottom:"20rem",
-        },
-      
+        height: "500px",        
+
     },
 }))
 const NewsLetter = () => {

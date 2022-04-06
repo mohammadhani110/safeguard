@@ -80,7 +80,7 @@ function RouterIndex() {
                 <Routes>
                 <Route exact path='/' element={<NormalRoute component={Home}/>}/>
                 <Route exact path='/about' element={<NormalRoute component={About}/>}/>
-                <Route exact path='/services' element={<NormalRoute component={Services}/>}/>
+                <Route exact path='/personal-insurance' element={<NormalRoute component={Services}/>}/>
 
 
                 {/* <Route path='*' element={<Error404 />} /> */}
